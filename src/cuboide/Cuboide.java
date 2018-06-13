@@ -6,11 +6,13 @@
 package cuboide;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
+import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -74,14 +76,33 @@ public class Cuboide extends JFrame{
         JPanel oeste = new JPanel();
         oeste.setLayout(new BoxLayout(oeste, BoxLayout.Y_AXIS));
         labelDim = new JLabel("Dimensiones");
-        //box
+        JPanel oesteX = new JPanel();
+        labelX = new JLabel("X: ");
+        textoX = new JTextField(8);
+        JPanel oesteY = new JPanel();
+        labelY = new JLabel("Y: ");
+        textoY = new JTextField(8);
+        JPanel oesteZ = new JPanel();
+        labelZ = new JLabel("Z: ");
+        textoZ = new JTextField(8);
+        JPanel oesteTope = new JPanel();
         labelTope = new JLabel("Nº tope");
         textoTope = new JTextField(10);
         buttonMontar = new JButton("Generar");
         
+        oesteX.add(labelX);
+        oesteX.add(textoX);
+        oesteY.add(labelY);
+        oesteY.add(textoY);
+        oesteZ.add(labelZ);
+        oesteZ.add(textoZ);
+        oesteTope.add(labelTope);
+        oesteTope.add(textoTope);
         oeste.add(labelDim);
-        oeste.add(labelTope);
-        oeste.add(textoTope);
+        oeste.add(oesteX);
+        oeste.add(oesteY);
+        oeste.add(oesteZ);
+        oeste.add(oesteTope);
         oeste.add(buttonMontar);
         //PANEL ESTE------------------------------------------------------------
         JPanel este = new JPanel();
