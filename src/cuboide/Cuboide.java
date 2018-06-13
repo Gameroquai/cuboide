@@ -73,9 +73,16 @@ public class Cuboide extends JFrame{
         //PANEL OESTE-----------------------------------------------------------
         JPanel oeste = new JPanel();
         oeste.setLayout(new BoxLayout(oeste, BoxLayout.Y_AXIS));
+        labelDim = new JLabel("Dimensiones");
+        //box
+        labelTope = new JLabel("Nº tope");
+        textoTope = new JTextField(10);
+        buttonMontar = new JButton("Generar");
         
-        
-        
+        oeste.add(labelDim);
+        oeste.add(labelTope);
+        oeste.add(textoTope);
+        oeste.add(buttonMontar);
         //PANEL ESTE------------------------------------------------------------
         JPanel este = new JPanel();
         
